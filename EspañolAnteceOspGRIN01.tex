@@ -1,0 +1,230 @@
+\documentclass[12pt,letterpaper,onecolumn,twoside]{article}
+\usepackage[spanish]{babel} 
+\usepackage[left=2cm,right=2cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}\lhead{}\chead{}\rhead{}
+\renewcommand{\headrulewidth}{0pt}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx} % gráficos
+\usepackage{subfigure} % subgráfico
+\usepackage{lscape}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage[noblocks]{authblk}
+\usepackage{float}
+\usepackage{cite}% para contraer referencias
+\usepackage[usenames]{color}
+\usepackage{multirow}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%\renewcommand{\baselinestretch }{1.5}
+%\singlespacing 
+
+%\title{\textbf{Protocolo~de~investigaci\'on:\\ Doctorado~Ingeniería~y \\Ciencias~Aplicadas~UAEM:}\medskip\\ 
+%{\em Estructuras de multicapas dieléctricas basadas en Silicio poroso con respuestas óptica controlada por la temperatura: Estudio teórico y experimental}}
+%
+%\author{\textbf{Cristian Alfredo Ospina De la cruz}\thanks{Maestro en Ciencias. UAEM. Email:crisalod@gmail.com }\\Asesora:Dra Vivechana Argwal. CIICAp\\ Coasesor: Dr. Luis Mochan. ICF-UNAM}
+%%\vspace{-3pt}
+%%%crisalod@gmail.com
+%%\vspace{1pt}
+ \title{\textbf{Diseño, Fabricación y Caracterización de Microcavidades de Silicio Poroso con Anodización Asimétrica: Comparación con diferentes tratamiento térmico} }
+
+\author[1,2]{C. A. Ospina de la Cruz}
+\author[1]{W. L. Mochan }
+\author[1,3]{V. Agarwal }
+\affil[1]{{\scriptsize Posgrado en Ingeniería y Ciencias Aplicadas del Centro de Investigación en Ingeniería y Ciencias Aplicadas (CIICAp-IICBA), Universidad Autónoma del Estado de Morelos (UAEM), Cuernavaca CP 62209, México}}
+\affil[2]{{\scriptsize Instituto de Ciencias Física ,Universidad Nacional Autonoma de Mexico, Av. Universidad S/N, Col. Chamilpa, 62210 Cuernavaca, Morelos, Mexico  } }
+\affil[3]{{\scriptsize Centro de Investigación en Ingeniería y Ciencias Aplicadas,Universidad del Estado de Morelos, Av. Universidad 1001 Col. Chamilpa, Cuernavaca, Morelos 62209, Mexico  } }
+\affil[*]{Corresponding author: xxxxxx@xxxx.xxx}
+\date{}
+
+\begin{document}
+%\renewcommand{\baselinestretch }{1.5}
+\renewcommand{\contentsname}{Contenidos}
+\renewcommand{\abstractname}{Resumen}
+\input{Silabeo.tex} 
+\vspace{50pt} 
+
+\maketitle
+\begin{abstract}
+Describimos un estudio  experimental de las  microcavidades de silicio poroso (PSMC)  con Anodización Asimétrica (AA). Las PSMC con AA consistían en dos reflectores Bragg (BR) con un defecto entre ellos. Fue fabricado por grabado electroquímico de solución acuosa de acido fluoridico (HF) y etanol. Las microcavidades (MC) fueron sometidas a un proceso de oxidación térmica  (DTOP). De esta forma, obtuvimos un silicio poroso oxidado (OPS) que induce un cambio de la respuesta a la región IR al Visible. Después de la formación electroquímica, la PSMC con AA se separa electroquimicamente con disolvente y se transfiere mecánicamente a cuarzo (MCL). La caracterización de las MC y MCL se realizó mediante espectroscopia SEM  y UV-Vis-NIR. Comparamos las muestras MC y MCL con diferentes temperaturas (21$°$C, 300$°$C, 600$°$C y 800$°$C) en diferentes puntos de medición, encontrando una relación de la temperatura con el FWHM. Estos resultados abren la posibilidad de crear estructuras fotónicas basadas en silicio dentro del rango IR-Visibles en la misma muestra con diferentes porosidades y profundidades. 
+\end{abstract}
+\vspace{-0.8cm}
+\singlespacing 
+\tableofcontents
+\spacing{1}
+ \section{Introducci\'on}
+El comportamiento y la estructuras de los materiales nanoestructurados se ha convertido en un gran tema de interés mundial donde ha resultado numerosas  investigación desde hace algún tiempo. Encontramos un gran camino por recorrer  para las futuras exploraciones tecnológicas, un sinnúmero de retos y desafíos que abre un abanico de posibilidades para desarrollar estudio mas avanzando sobre dichos temas \cite{I1}. El silicio poroso (PS) es un material nanoestructurado versátil y un excelente candidato como plataforma tecnológica para diferentes aplicaciones de sensado\cite{I2}. Esto último, gracias a su fácil fabricación, su grande área superficial, su alta reactividad de superficie, y sobre todo, por su capacidad de transducción óptica.
+Una configuración de anodización asimétrica se obtienen muestras con un gradiente lateral en términos de tamaño de poro y espesor de la capa porosa. En esta configuración, la cara del electrodo de platino (cátodo) se mantiene relativamente perpendicular a la superficie del sustrato de Si (ánodo) en uno de los extremos de la celda, de tal forma que la distribución de la corriente dentro de la solución electrolítica varía en función de la distancia del electrodo debido a la resistencia del electrolito, resultando en una disminución de la densidad de corriente conforme la distancia desde el electrodo aumenta. El resultado es una superficie porosa con diferentes tamaños de poros que van desde unos cuantos nanómetros hasta poros del orden de unos cuantos micrómetros. Las dimensiones de los poros obtenidos en el mismo chip pueden controlarse ajustando la corriente de anodización y la concentración del electrólito \cite{I3}. Actualmente, este tipo de muestras han encontrado relevante su aplicación como filtros de banda ópticos\cite{I3}, dispositivos con banda fotónicas multidireccional (códigos de barra fotónicos)\cite{I4} y principalmente, como biosensores. De esta forma, se estudia el efecto que ejercen diferentes topografías (porosidades en la misma muestra) en el cultivo/adhesión de ciertas células \cite{I5 ,I6}, reduciendo considerablemente la cantidad de muestras y costo del estudio. Además, también son muy útiles cuando se requiere una técnica de exclusión por tamaño de biomoléculas permitiendo la identificación y separación de estos compuestos biológicos \cite{I7}.\\ 
+Este trabajo esta organizado de la siguiente manera. En la Sección 2, los detalles experimentales de como se  fabricaron las  microcavidades (MC) silicio poroso (PS) con anodización asimétrica (AA)    mediante un grabado electroquímico en una oblea de silicio a través de una configuración de electrodo asimétrica en solución acuosa de HF etanólico. En la sección 3, hacemos la discusión de los resultado comparando los resultados obtenidos y en la Sección 4, las conclusiones. 
+\section{Detalles Experimentales}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.4]{../Images/EPS0}
+	\caption{\emph{Esquema de la celda clectroquímica  para una configuración con anodización asimétrica. Se muestra  un gradiente lateral en términos de tamaño de poro y espesor de la capa porosa. En esta configuración, la cara del electrodo de platino (cátodo) se mantiene relativamente perpendicular a la superficie del sustrato de Si (ánodo) en uno de los extremos de la celda  }}
+	\label{fig:p0}
+\end{figure}
+Algunas de las estructuras fotónicas simuladas se fabricaron mediante grabado anódico de una oblea de Si cristalina de tipo p orientada (100) (resistividad 0.002 - 0.005 $ \Omega \cdot cm$), en condiciones galvanostáticas.Las mustras se prepararon de forma similar a la descrita anteriormente en Y.L Khung et al. \cite{Ik}. El proceso de anodización electroquímica se realizó a temperatura ambiente, con una mezcla electrolítica de ácido fluorhídrico (HF) (concentración: 48 $ \% $ de peso), glícerol (pureza: 99.8$ \% $ de peso) y etanol (pureza: 99.9$ \% $ de peso) en 3: 7 : 1 proporción de volumen, respectivamente. Colocando la oblea del silicio a la superficie de la celda electrolitica y el electrodo de platino perpendicular en un extremo como se ve en la Fig. \ref{fig:p0}. Después del proceso de anodización, las muestras se enjuagan con etanol (pureza: 99,9$ \% $ en peso). Las microcavidades (MC) de silicio poroso con Anodización Asimétrica (AA), fueron fabricadas con diferentes  corrientes $(I_1I_2)_5I_1I_2(I_1I_2)_5$, la primera de $I_1=4.8 \ \  mA$ y la otra de  $I_2=38.7 \ \  mA$, con tiempos de ataque $t_1=39s$ y $t_2=9s$, sobre un área de $1.2 \ \ cm^2$ .El cátodo esta constituido de un alambre de platino que fue arreglado en forma de una punta de diámetro aproximado de ($0.5\ \ mm$). Después de la formación electroquímica, la PSMC con AA se separa electroquimicamente con disolvente y se transfiere mecánicamente a cuarzo (MCL), siguiendo el procedimiento de \cite{I10L}. Las mediciones de reflectividad se llevaron a cabo con un espectrofotómetro UV-Vis-NIR Perkin Elmer Lambda 950. Las morfologías de las capas porosas grabadas ( transversal) se observaron utilizando microscopios electrónicos de barrido SEM Hitachi SU1510 (Hitachi High Technologies Canada, Inc., Toronto, Canadá).
+El tratamiento térmico($ 300°C $, $ 600°C $, $ 800°C $) para las Microcavidades de silicio poroso con Anodización Asimétrica para MC y MCL,  fueron  a través de resistencias eléctricas y horno usado para oxidar las muestras(Horno tubular (GSL-1500X) ).  
+
+\section{Discusión y Resultados}
+\subsection{Microcavidades de silicio poroso con Anodización Asimétrica}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.4]{../Images/PsiR1}
+	\caption{\emph{Muestra de la Microcavidad (MC) de silicio poroso con Anodización Asimétrica que fue fabricada con diferentes  corrientes $(I_1I_2)_5I_1I_2(I_1I_2)_5$, la primera de $I_1=4.8 \ \  mA$ y la otra de  $I_2=38.7 \ \  mA$, con tiempos de ataque de $t_1=39s$ y $t_2=9s$ , sobre un área de $1.2 \ \ cm^2$. a) La muestra $MC_{_{21° C}}$, tenemos los puntos de medición indicados (1(2mm),2(4mm),3(6mm) y 4(8mm)), donde el punto 1 esta  cerca del el electrodo y el punto 4 mas alejado del electrodo, como se  observa en la Figura \ref{fig:p0}. b) Los espectros de reflectancia ($\%$) en función de la longitud de onda (nm) medidos en el punto 1 ($\lambda_{_{1}}=746 nm$), punto 2 ($\lambda_{_{2}}=705 nm$), punto 3 ($\lambda_{_{3}}=685 nm$) y punto 4 ($\lambda_{_{4}}=677 nm$). }}
+	\label{fig:p1}
+\end{figure}
+
+La Figura \textbf{\ref{fig:p1}} se muestra la microcavidad (MC) de silicio poroso con anodización asimétrica (AA), que fue fabricada con diferentes  corrientes $(I_1I_2)_5I_1I_2(I_1I_2)_5$, la primera de $I_1=4.8 \ \  mA$ y la otra de  $I_2=38.7 \ \  mA$, con tiempos de ataque de $t_1=39s$ y $t_2=9s$ , sobre un área de $1.2 \ \ cm^2$. La Figura \textbf{\ref{fig:p1} a)} La muestra $MC_{_{21° C}}$, tenemos los puntos de medición (1(2mm),2(4mm),3(6mm) y 4(8mm)), donde el punto 1 esta  cerca del el electrodo y el punto 4 mas alejado del electrodo, como se  observa en la Figura \textbf{\ref{fig:p0}} de la sección 2. En la Figura \textbf{\ref{fig:p1} b)}  mostramos los espectros de reflectancia($\%$) en función de la longitud de onda (nm)  medidos en el punto 1 ($\lambda_{_{1}}=746 nm$), punto 2 ($\lambda_{_{2}}=705 nm$), punto 3 ($\lambda_{_{3}}=685 nm$) y punto 4 ($\lambda_{_{4}}=677 nm$). Y medidos los anchos medios de los picos FWHM (Full Width at Half Maximum) en cada punto de medición  22.1 nm (Para en punto 1),  23.2 nm (Para en punto 2),  19.4 nm (Para en punto 3) y  19.8 nm (Para en punto 4). 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.4]{../Images/Sem1}
+	\caption{\emph{Micrografias de la sección trasversal de SEM de  microcavidades de silicio poroso con anodización asimétrica, donde podemos medir la profundidad $d_{_{i}}$ (i=1,2,3,4) de la estructura. Para cada muestra tenemos los puntos de medición calculando  el espesor físico total : a) el punto 1 ($d_{_{1}}=3.8 \mu m$), b) punto 2 ($d_{_{2}}=3.6 \mu m$), c) punto 3 ($d_{_{3}}= 3.4 \mu m$) y d) punto 4 ($d_{_{4}}=3.1 \mu m$).}}
+	\label{fig:p2}
+\end{figure}
+La Figura \textbf{\ref{fig:p2}} mostramos las micrografias de la sección Trasversal de SEM de  Microcavidades de silicio poroso con Anodización Asimétrica, donde podemos medir la profundidad de la estructura. Para cada muestra tenemos los puntos de medición calculando  el espesor físico total $d_{_{i}}$ (i=1,2,3,4), las Figuras \textbf{\ref{fig:p2}} nos muestran,   a) el punto 1 ($d_{_{1}}=3.8 \mu m$), b) punto 2 ($d_{_{2}}=3.6 \mu m$), c) punto 3 ($d_{_{3}}= 3.4 \mu m$) y d) punto 4 ($d_{_{4}}=3.1 \mu m$) respectivamente. Pudiendo ver  el tamaño de la estructura total, viendo las disminución en cada punto de medición.
+
+\subsection{Tratamiento térmico de Microcavidades}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.3]{../Images/PsiTem}
+	\caption{\emph{Fotografías de las  microcavidades de silicio poroso con anodización asimétrica. Para cada muestra tenemos los puntos de medición indicado (1(2mm),2(4mm),3(6mm) y 4(8mm)), donde el punto 1 esta por cerca del el electrodo y el punto 4 mas alejado del electrodo.  La temperatura ($° C$) utilizada para el tratamiento térmico ($ 300°C $, $ 600°C $, $ 800°C $) en cada una de las  muestras a) $MC_{_{21° C}}$, b) $MC_{_{300° C}}$, c) $MC_{_{600° C}}$ y d) $MC_{_{800° C}}$.}}
+	\label{fig:p3}
+\end{figure}
+En la Figura \textbf{\ref{fig:p3}} son las fotografías de las   Microcavidades de silicio poroso con Anodización Asimétrica. Para cada muestra tenemos los puntos de medición indicado (1(2mm),2(4mm),3(6mm) y 4(8mm)), donde el punto 1 esta por cerca del el electrodo y el punto 4 mas alejado del electrodo.  La temperatura ($° C$) utilizada para el tratamiento térmico ($ 300°C $, $ 600°C $, $ 800°C $) en cada una de las  muestras, las Figuras \textbf{\ref{fig:p3}} a), b), c), d) nos muestran, $MC_{_{21° C}}$,  $MC_{_{300° C}}$,  $MC_{_{600° C}}$ y $MC_{_{800° C}}$, respectivamente. El tratamiento térmico   fueron  a través de resistencias eléctricas y horno usado para oxidar las muestras(Horno tubular (GSL-1500X)).
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.4]{../Images/p2}
+	\includegraphics[scale=.4]{../Images/p3}
+	\caption{\emph{Espectro de reflectancias ($\%$) en función de la longitud de onda (nm), de las microcavidades de silicio poroso con Anodización Asimétrica (MC) y se le dio tratamiento térmico, como se indica en la Figura \ref{fig:p3}. a) Comparamos la diferencias de picos en el punto 1, $\Delta \lambda_{_{300 °C}}=67 nm$,  $\Delta \lambda_{_{600 °C}}=45 nm$ y  $\Delta \lambda_{_{800 °C}}=39 nm$. b) Comparamos la diferencias de picos en el punto 2, $\Delta \lambda_{_{300 °C}}=37 nm$,  $\Delta \lambda_{_{600 °C}}=51 nm$ y  $\Delta \lambda_{_{800 °C}}=37 nm$. c) Lo mismo para este punto 3, $\Delta \lambda_{_{300 °C}}=37 nm$,  $\Delta \lambda_{_{600 °C}}=45 nm$ y  $\Delta \lambda_{_{800 °C}}=46 nm$. d) Y para el punto 4,  $\Delta \lambda_{_{300 °C}}=18 nm$,  $\Delta \lambda_{_{600 °C}}=34 nm$ y  $\Delta \lambda_{_{800 °C}}=48 nm$ }}
+	\label{fig:p4}
+\end{figure}
+En la Figura \textbf{\ref{fig:p4} a)}  mostramos los espectros de reflectancia($\%$) en función de la longitud de onda (nm), para el punto 1 de las diferentes muestras, con sus diferentes tratamiento térmico para $21 °C$ ($\lambda_{_{1}}=746 nm$) ,  $300 °C$ ($\lambda_{_{1}}=679 nm$), $600 °C$ ($\lambda_{_{1}}=624 nm$) y  $800 °C$ ($\lambda_{_{1}}=598 nm$), teniendo en cuenta las diferencias entre picos, $\Delta \lambda_{_{300 °C}}=67 nm$,  $\Delta \lambda_{_{600 °C}}=45 nm$ y  $\Delta \lambda_{_{800 °C}}=39 nm$. De la Figura \textbf{\ref{fig:p4} a)} sacamos  los anchos medios de los picos FWHM (Full Width at Half Maximum)\cite{FMHW1, FMHW2, FMHW3} en cada punto de medición  22.1 nm (Para $21 °C$ en punto 1),  19.2 nm (Para $300 °C$ en punto 1),  20.5 nm (Para $300 °C$ en punto 1) y  28.4 nm (Para $300 °C$ en punto 1). Así mismo, en la Figura \textbf{\ref{fig:p4} b)}  para el punto 2 de las diferentes muestras, con sus diferentes tratamiento térmico para $21 °C$ ($\lambda_{_{2}}=705 nm$) ,  $300 °C$ ($\lambda_{_{2}}=667 nm$), $600 °C$ ($\lambda_{_{2}}=616 nm$) y  $800 °C$ ($\lambda_{_{3}}=579 nm$), teniendo en cuenta las diferencias entre picos, $\Delta \lambda_{_{300 °C}}=37 nm$,  $\Delta \lambda_{_{600 °C}}=51 nm$ y  $\Delta \lambda_{_{800 °C}}=37 nm$. De esa misma figura sacamos los FWHM, 23.2 nm (Para $21 °C$ en punto 2),  16.5 nm (Para $300 °C$ en punto 2),  19.5 nm (Para $300 °C$ en punto 2) y  26.3 nm (Para $300 °C$ en punto 2). Seguimos analizando la Figura \textbf{\ref{fig:p4} c)}  para el punto 3 de las diferentes muestras, con sus diferentes tratamiento térmico para $21 °C$ ($\lambda_{_{3}}=685 nm$) ,  $300 °C$ ($\lambda_{_{3}}=658 nm$), $600 °C$ ($\lambda_{_{3}}=613 nm$) y  $800 °C$ ($\lambda_{_{3}}=567 nm$), teniendo en cuenta las diferencias entre picos, $\Delta \lambda_{_{300 °C}}=37 nm$,  $\Delta \lambda_{_{600 °C}}=45 nm$ y  $\Delta \lambda_{_{800 °C}}=46 nm$ y  sacamos los FWHM, 23.2 nm (Para $21 °C$ en punto 3),  16.5 nm (Para $300 °C$ en punto 3),  19.5 nm (Para $300 °C$ en punto 3) y  26.3 nm (Para $300 °C$ en punto 3). Y por ultimo, de la Figura \textbf{\ref{fig:p4} d)} para el punto 4, con sus diferentes tratamiento térmico para $21 °C$ ($\lambda_{_{4}}=677 nm$) ,  $300 °C$ ($\lambda_{_{4}}=642 nm$), $600 °C$ ($\lambda_{_{4}}=608 nm$) y  $800 °C$ ($\lambda_{_{4}}=560 nm$), teniendo en cuenta las diferencias entre picos, $\Delta \lambda_{_{300 °C}}=18 nm$,  $\Delta \lambda_{_{600 °C}}=34 nm$ y  $\Delta \lambda_{_{800 °C}}=48 nm$ y  sacamos los FWHM, 19.8 nm (Para $21 °C$ en punto 4),  17.8 nm (Para $300 °C$ en punto 4),  21.7 nm (Para $300 °C$ en punto 4) y  25.2 nm (Para $300 °C$ en punto 4).
+
+\subsection{Separación Electroquímica de Microcavidades }
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.4]{../Images/Spleva1}
+	\caption{\emph{Esquema de  las microcavidades de silicio poroso con anodización asimétrica,  que se separa electroquimicamente con disolvente, luego se transfiere mecánicamente a cuarzo (MCL) y al final se le hace tratamiento térmico; siguiendo el procedimiento de }\cite{I10L}.}
+	\label{fig:p6}
+\end{figure}
+En la Figura \ref{fig:p6}, se muestra el esquema de  las microcavidades de silicio poroso con anodización asimétrica,  que se separa electroquimicamente con disolvente, luego se transfiere mecánicamente a cuarzo (MCL) y al final se le hace tratamiento térmico. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.3]{../Images/PsiTLa}
+	\caption{\emph{Fotografías de las microcavidades de silicio poroso con Anodización Asimétrica que se separaron electroquimicamente con disolvente,  se transfiere mecánicamente a cuarzo (MCL) y al final se le dio tratamiento térmico. Para cada muestra tenemos los puntos de medición indicado (1(2mm),2(4mm),3(6mm) y 4(8mm)), donde el punto 1 esta por cerca del el electrodo y el punto 4 mas alejado del electrodo.  La temperatura ($° C$) utilizada para el tratamiento térmico ($ 300°C $, $ 600°C $, $ 800°C $) en   las  muestras $MCL_{_{21° C}}$, $MCL_{_{300° C}}$, $MCL_{_{600° C}}$ y $MCL_{_{800° C}}$.}}
+	\label{fig:p7}
+\end{figure}
+En la Figura \ref{fig:p3} son las fotografías de las microcavidades de silicio poroso con Anodización Asimétrica que se separaron electroquimicamente con disolvente,  se transfiere mecánicamente a cuarzo (MCL) y al final se le dio tratamiento térmico. Para cada muestra tenemos los puntos de medición indicado (1(2mm),2(4mm),3(6mm) y 4(8mm)), donde el punto 1 esta por cerca del el electrodo y el punto 4 mas alejado del electrodo.  La temperatura ($° C$) utilizada para el tratamiento térmico ($ 300°C $, $ 600°C $, $ 800°C $) en cada muestra, las Figuras \textbf{\ref{fig:p2}} a), b), c), d) nos muestran, $MCL_{_{21° C}}$,  $MCL_{_{300° C}}$,  $MCL_{_{600° C}}$ y $MCL_{_{800° C}}$, respectivamente. El tratamiento térmico   fueron  a través de resistencias eléctricas y horno usado para oxidar las muestras(Horno tubular (GSL-1500X)).
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.4]{../Images/pl1}
+	\includegraphics[scale=.4]{../Images/pl2}
+	\caption{\emph{Mostramos el espectro de reflectancias ($\%$) en función de la longitud de onda (nm), de las microcavidades de silicio poroso con anodización asimétrica que se separaron electroquimicamente con disolvente,  se transfiere mecánicamente a cuarzo (MCL) y al final se le dio tratamiento térmico, como se indica en la Figura \ref{fig:p7}. a)  $21 °C$ para $MCL_{_{21° C}}$ en el punto 1 ($\lambda_{_{1}}=681 nm$), punto 2 ($\lambda_{_{2}}=670 nm$), punto 3 ($\lambda_{_{3}}=668 nm$) y punto 4 ($\lambda_{_{4}}=644 nm$). b) $300 °C$ para $MCL_{_{300° C}}$, $\lambda_{_{1}}=626 nm$,  $\lambda_{_{2}}=621 nm$,  $\lambda_{_{3}}=595 nm$ y $\lambda_{_{4}}=568 nm$. c) $600 °C$ para la muestra $MCL_{_{600° C}}$, $\lambda_{_{1}}=655 nm$,  $\lambda_{_{2}}=592 nm$,  $\lambda_{_{3}}=588 nm$ y  $\lambda_{_{4}}=578 nm$. d) $800 °C$ para  $MCL_{_{800° C}}$, $\lambda_{_{1}}=626 nm$, $\lambda_{_{2}}=621 nm$,  $\lambda_{_{3}}=595 nm$ y $\lambda_{_{4}}=568 nm$ }}
+	\label{fig:p8}
+\end{figure}
+
+ En la Figura \textbf{\ref{fig:p8} a)}  mostramos los espectros de reflectancia($\%$) en función de la longitud de onda (nm), que fueron sometidas a tratamiento térmico de $21 °C$ para $MCL_{_{21° C}}$, como lo indica también la Figura \ref{fig:p7} a),  en el punto 1 ($\lambda_{_{1}}=681 nm$), punto 2 ($\lambda_{_{2}}=670 nm$), punto 3 ($\lambda_{_{3}}=668 nm$) y punto 4 ($\lambda_{_{4}}=644 nm$). Y medidos los anchos medios de los picos FWHM en cada punto de medición  20.1 nm (Para en punto 1),  21.4 nm (Para en punto 2),  18.9 nm (Para en punto 3) y  18.8 nm (Para en punto 4). Pasamos a la Figura \textbf{\ref{fig:p8} b)}  mostramos los espectros de reflectancia  con tratamiento térmico de $300 °C$ para $MCL_{_{300° C}}$, como se observa en la la Figura\textbf{ \ref{fig:p7} b)}  en el punto 1 ($\lambda_{_{1}}=626 nm$), punto 2 ($\lambda_{_{2}}=621 nm$), punto 3 ($\lambda_{_{3}}=595 nm$) y punto 4 ($\lambda_{_{4}}=568 nm$). Y  los  FWHM  para cada punto de medición son  20.3 nm ,  19.5 nm ,  18.5 nm  y  19.2 nm respectivamente. En la siguiente la Figura \textbf{\ref{fig:p8} c)}  los espectros de reflectancia con tratamiento térmico de $600 °C$ para la muestra $MCL_{_{600° C}}$  en los  puntos (1, 2, 3 y 4), visto en la la Figura \ref{fig:p7} c),  $\lambda_{_{1}}=655 nm$,  $\lambda_{_{2}}=592 nm$,  $\lambda_{_{3}}=588 nm$ y  $\lambda_{_{4}}=578 nm$ y los FWHM  en cada punto de medición son 29.3 nm ,  27.4 nm ,  28.1 nm  y  27.6 nm en el mismo orden. Y al final medimos en  la Figura \textbf{\ref{fig:p8} d)} mostramos las reflectancias de la muestra levantada y  con tratamiento térmico de $800 °C$ para  $MCL_{_{800° C}}$ en los  puntos (1, 2, 3 y 4), así como se ve en la Figura \ref{fig:p7} d), $\lambda_{_{1}}=626 nm$, $\lambda_{_{2}}=621 nm$,  $\lambda_{_{3}}=595 nm$ y $\lambda_{_{4}}=568 nm$  y los FWHM  en cada punto de medición son 20.3 nm ,  19.5 nm ,  18.5 nm  y  19.2 nm  respectivamente.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| c | c | c | c | c | c | c | c |  c |}
+			\hline
+			\multicolumn{9}{ |c| }{\textbf{FWHM (nm)}} \\ \hline
+			\textbf{Points} & \textbf{MC}$_{_{21° C}}$ &\textbf{MCL}$_{_{21° C}}$ & \textbf{MC}$_{_{300° C}}$ & \textbf{MCL}$_{_{300° C}}$ & \textbf{MC}$_{_{600° C}}$ & \textbf{MCL}$_{_{600° C}}$ & \textbf{MC}$_{_{800° C}}$ & \textbf{MCL}$_{_{800° C}}$ \\ \hline
+		\textbf{1} &  22.1 & 20.1 & 19.2 & 20.3 & 20.5 & 29.3 & 28.4 & 32.2 \\ \hline
+		\textbf{2} &  23.2 & 21.4 & 16.5 & 19.5 & 19.5 & 27.4 & 26.3 & 31.5 \\ \hline
+		\textbf{3} &  19.4 & 18.9 & 17.9 & 18.5 & 20.9 & 28.1 & 27.5 & 30.7 \\ \hline
+		\textbf{4} &  19.8 & 18.8 & 17.8 & 19.2 & 21.7 & 27.6 & 25.2 & 29.7 \\ \hline
+			\multicolumn{9}{ |c| }{\textbf{MC:} Microcavidad, \textbf{MCL:}Microcavidad Levantada} \\ \hline
+		\end{tabular}
+		\caption{\emph{Análisis el FWHM en función de la temperatura para cada pico de las microcavidades. El  FWHM  (Full Width at Half Maximum) se   denota $\Delta \lambda_{_{i}}  $  que describe  el ancho de pico correspondiente a la resonancia en $\lambda_{_{i}}$, para i=1,2,3,4. La temperatura se mide en ($° C$) utilizada en el tratamiento térmico para cada una de las  muestras MC y MCL (para $21° C$, $300° C$, $600° C$, $800° C$)}}
+		\label{tab:t1}
+	\end{center}
+\end{table}
+De las Figuras \textbf{\ref{fig:p4}} y \textbf{\ref{fig:p8} } se sacaron y  analizaron los espectros de reflectancias de cada una de las  muestras MC y MCL (para $21° C$, $300° C$, $600° C$, $800° C$), en diferentes puntos (1(2mm), 2(4mm), 3(6mm) y 4(8mm)) y la tabla \ref{tab:t1}  nos muestras todos los FWHM en función de la temperatura para cada pico de las microcavidades fabricadas. Los  cambios observados es debido a la formación de dióxido de silicio ($SiO_2$); este cambio de longitud de onda muestra en diferentes  tiempos de oxidación y temperatura
+
+%+++++++++++++++++++++++++++++++++++++++++++
+
+\section{Conclusión}
+ El montaje y diseño de las microcavidad (MC) de silicio poroso con anodización asimétrica (AA) en solución acuosa y método de anodizacón es sencillo y económico. Igual que la  separación  electroquimicamente con disolvente, luego se transfiere mecánicamente a cuarzo (MCL) de dichas estructuras fotónicas. Se hizo una comparación de diferentes oxidaciones térmicas ($ 21°C $, $ 300°C $, $ 600°C $, $ 800°C $),  encontrando  respuesta óptica en diferentes puntos de medición en el IR y el visible en una sola muestra alcanzando corrimiento de picos  $\Delta \lambda \sim \ \ 68 \ \ a \ \ 127 \ \ nm $. Se establecieron parámetros para calcular el FWHM encontrando como mínimos 16.5 nm y máximos 32.2 nm, como se observa en la tabla \ref{tab:t1}.  Es el primer reporte donde se compara diferentes  oxidación térmica en una sola  muestra de silicio poroso  con anodización asimétrica, sin levantar y levantada. 
+% \backmatter
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{bibliografía.bib} %Aquí ponen el nombre del archivo .bib
+\bibliographystyle{unsrt}
+ \small{
+\begin{thebibliography}{X}
+ \bibitem{I1}{Beale, M.I.J, J.D Benjamin, M.J Uren, N.G Chew, and A.G Cullis. 1985. \emph{?An Experimental and Theoretical Study of the Formation and Microstructure of Porous Silicon.?} J. Crystal Growth 73: 622?36. doi:10.1021/jp0706984. }
+\bibitem{I2}{Bisi, O., Stefano Ossicini, and L. Pavesi. 2000. \emph{?Porous Silicon: A Quantum Sponge Structure for Silicon Based Optoelectronics.?} Surface Science Reports 38 (1): 1?126. doi:10.1016/S0167-5729(99)00012-6.}
+
+\bibitem{I3}Canham, L. 1997. \emph{Properties of Porous Silicon}. Edited by Canham L. DERA, Malvern, UK.
+
+
+\bibitem{Ik}Khung, Y. L., G. Barritt, and N. H. Voelcker. \emph{Using continuous porous silicon gradients to study the influence of surface topography on the behaviour of neuroblastoma cells.} Experimental Cell Research 314.4 (2008): 789-800.
+\bibitem{I4}Khung, Y L, G Barritt, and N H Voelcker. 2008. ?Using Continuous Porous Silicon Gradients to Study the Influence of Surface Topography on the Behaviour of Neuroblastoma Cells.? Experimental Cell Research 314 (4): 789?800. doi:10.1016/j.yexcr.2007.10.015.
+\bibitem{I5}Li, Yang Yang, Peter Kim, and Michael J Sailor. 2005. ?Painting a Rainbow on Silicon ? A Simple Method to Generate a Porous Silicon Band Filter Gradient? Physica Status Solidi (a) 1618 (8): 1616?18. doi:10.1002/pssa.200461200.
+ \bibitem{I6}Khung, Y L, and N H Voelcker. 2009. ?Multidirectional Lateral Gradient Films with Position Dependent Photonic Signatures Made from Porous Silicon.? Optical Materials 32 (1): 234?42. doi:10.1016/j.optmat.2009.07.015. 
+  \bibitem{I7} Wang,  Peng-Yuan,  Lauren  R.  Clements,  Helmut  Thissen,  Andrew  Jane, Wei-Bor  Tsai,  and Nicolas  H.  Voelcker.  2012.   ?Screening   Mesenchymal  Stem  Cell  Attachment  and Differentiation  on  Porous Silicon Gradients.?  Advanced  Functional Materials  22 (16): 3414?23. doi:10.1002/adfm.201200447. Warwick, Michael E A, and Russell Binions. 2014
+ \bibitem{I8}Lehmann, Volker. 2002. Electrochemistry of Silicon: Instrumentation, Science, Materials and
+ Applications. Transport. Vol. 3. doi:10.1002/3527600272.ch2.
+  
+  
+\bibitem{I9} Chuang, S. F., S. D. Collins, and R. L. Smith. 1989.\emph{ ?Preferential Propagation of Pores during the Formation of Porous Silicon: A Transmission Electron Microscopy Study.?} Applied Physics Letters 55 (7): 675?77. doi:10.1063/1.101819.
+\bibitem{I10} Collins, B.E., K.-P.S. Dancil, G. Abbi, and M.J. Sailor. 2002. \emph{?Determining Protein Size Using an Electrochemically Machined Pore Gradient in Silicon.}? Advanced Functional Materials 12 (3): 187. doi:10.1002/1616-3028(200203)12:3<187::AID-ADFM187>3.0.CO;2-E.
+
+\bibitem{I10L}Ocier, Christian R., et al. "Tunable visibly transparent optics derived from porous silicon." ACS Photonics 4.4 (2017): 909-914.
+
+\bibitem{FMHW1} Vinegoni, Claudio, Massimo Cazzanelli, and L. Pavesi. "Porous silicon microcavities." Silicon-based Material and Devices. Academic Press, 2001. 123-192.
+\bibitem{FMHW2}Araki, Minoru, Hideki Koyama, and Nobuyoshi Koshida. "Optical cavity based on porous silicon superlattice technology." Japanese journal of applied physics 35.2S (1996): 1041.
+
+\bibitem{FMHW3} Ramiro?Manzano, F., et al. "Porous silicon microcavities based photonic barcodes." Advanced materials 23.27 (2011): 3022-3025.
+%\bibitem{I81}Artur R. Davoya et al., Appl. Phys. Lett. 94, 161105 (2009).
+%
+%
+%
+%
+%\bibitem{I11}Lehmann, Volker. 2002. Electrochemistry of Silicon: Instrumentation, Science, Materials and
+%Applications. Transport. Vol. 3. doi:10.1002/3527600272.ch2.
+%
+%
+%
+%\bibitem{I13} Wang,  Peng-Yuan,  Lauren  R.  Clements,  Helmut  Thissen,  Andrew  Jane, Wei-Bor  Tsai,  and Nicolas  H.  Voelcker.  2012.   ?Screening   Mesenchymal  Stem  Cell  Attachment  and Differentiation  on  Porous Silicon Gradients.?  Advanced  Functional Materials  22 (16): 3414?23. doi:10.1002/adfm.201200447. Warwick, Michael E A, and Russell Binions. 2014
+%
+% \bibitem{I8}N. D. Lanzillotti-Kimura et al., Phys. Rev. Lett. 104, 197402 (2010).
+%\bibitem{I4}Properties of Porous Silicon, Edited by Leigh Canham DERA, Malvern, UK.
+%Published by: INSPEC, The Institution of Electrical Engineers, London, United
+%Kingdom (1997).
+%\bibitem{I4}V. Agarwal and J. A. del R?o, Appl. Phys. Lett, 82, 1512 (2003).
+%\bibitem{I4}J. O. Estevez, J. Arriaga, A. Mendez Blas, V. Agarwal. Appl. Phys. Lett. 93,
+%191915 (2008).
+%\bibitem{I4}J. O. Estevez et al., Appl. Phys. Lett, 94, 061914 (2009).
+%\bibitem{I4}S. Fahr et al., Optics Express, 16, 9332 (2008).
+%\bibitem{I4}M. Ghulinyan et al., Appl. Phys. Lett. 93, 061113 (2008).
+%\bibitem{I4}M. Ghulinyan, C. J. Oton, Z. Gaburro, L. Pavesi. Phys. Rev. Lett. 94, 127401
+%(2005).
+%\bibitem{I4}M. Ghulinyan, Z. Gaburro, C. Toninelli, L. Pavesi, D. S. Wiersma, Nat. Photon.
+%1, 172-175 (2007).
+%\bibitem{I4}Jonh P. McKelvey, Robert E. Krieger Publishing Company. Malabar, Florida,
+%(1966).
+%\bibitem{I4}Yoder M. N. Electron Devices 43, 1633 (1996).
+%\bibitem{I4}Yablonovitch, Eli, Phys. Rev. Lett. 58, 2059 (1987).
+%\bibitem{I4}John S. Phys. Rev. Lett. 58, 2486 (1987).
+%\bibitem{I4}Kuilong Yu, Tongxiang Fan, Shuai Lou, Di Zhang, Progress in Material Science,
+%58, 825-873 (2013).
+%\bibitem{I4}Pete Vukusic and J. Roy Sambles, NATURE, 424, (2003).
+%\bibitem{I4}L. Chen, Y. Suzuki and G.E. Kohnke, Appl. Phys. Lett. 80, 1514 (2002).
+% 1) Canham, L. T. Silicon quantum wire array fabrication by
+%electrochemical and chemical dissolution of wafers. Appl. Phys. Lett.
+%1990, 57, 1046?1048.
+
+\end{thebibliography}
+%capitulos1111111111111111111111
+
+
+
+
+\end{document} 
